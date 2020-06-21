@@ -24,7 +24,7 @@ const trigger = [
   ["what", "why", "how", "where", "when"]
 ];
 
-// These are bot responses, paired in order with the above 'trigger' phrases
+ //Bot responses, paired in order with the above 'trigger' phrases
 
 const reply = [
   ["Hello!", "Hi!", "Hey!", "Hi there!"],
@@ -68,7 +68,7 @@ const alternative = [
 
 // Same purpose as the 'alternative' but an attempt at being culturally relevant ;)
 
-const coronavirus = ["Please stay home"];
+const Hiya = ["Please stay home"];
 
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.getElementById("input")
@@ -87,8 +87,7 @@ function output(input) {
   //Transforms whatever the user inputs to lowercase and remove all chars except word characters, space, and digits
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
 
-  // For example 'tell me a story' becomes 'tell me story'
-  // Or 'i feel happy' -> 'happy'
+  
   text = text
     .replace(/ a /g, " ")
     .replace(/i feel /g, "")
@@ -136,16 +135,3 @@ function addChat(input, product) {
   speak(product);
 }
 
-// const synth = window.speechSynthesis;
-// let voices = synth.getVoices();
-
-// function speak(string) {
-//   let u = new SpeechSynthesisUtterance(string);
-//   u.text = string;
-//   u.lang = "en-US";
-//   u.volume = 1; //0-1 interval
-//   u.rate = 1;
-//   u.pitch = 1; //0-2 interval
-//   synth.speak(u);
-//   debugger
-// }
