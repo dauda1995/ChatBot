@@ -1,5 +1,3 @@
-// These are words/phrases the user could type in
-
 const trigger = [
   ["hi", "hey", "hello", "good morning", "good afternoon"],
   ["how are you", "how is life", "how are things"],
@@ -73,12 +71,12 @@ const alternative = [
 const coronavirus = ["Please stay home"];
 
 document.addEventListener("DOMContentLoaded", () => {
-	const inputField = document.getElementById("input")
-	inputField.addEventListener("keydown", function(e) {
-		if (e.code === "Enter") {
-			let input = inputField.value;
-			inputField.value = "";
-			output(input);
+  const inputField = document.getElementById("input")
+  submit.addEventListener("click", function(e) {
+    if (e) {
+      let input = inputField.value;
+      inputField.value = "";
+      output(input);
     }
   });
 });
@@ -138,16 +136,16 @@ function addChat(input, product) {
   speak(product);
 }
 
-const synth = window.speechSynthesis;
-let voices = synth.getVoices();
+// const synth = window.speechSynthesis;
+// let voices = synth.getVoices();
 
-function speak(string) {
-  let u = new SpeechSynthesisUtterance(string);
-  u.text = string;
-  u.lang = "en-US";
-  u.volume = 1; //0-1 interval
-  u.rate = 1;
-  u.pitch = 1; //0-2 interval
-  synth.speak(u);
-  debugger
-}
+// function speak(string) {
+//   let u = new SpeechSynthesisUtterance(string);
+//   u.text = string;
+//   u.lang = "en-US";
+//   u.volume = 1; //0-1 interval
+//   u.rate = 1;
+//   u.pitch = 1; //0-2 interval
+//   synth.speak(u);
+//   debugger
+// }

@@ -10,6 +10,7 @@ body::after {
 	content: "";
 	background-image: url("chat-resizeimage.png");
 	background-repeat: no-repeat;
+	background-position: -48px 0px;
 	opacity: 0.5;
 	top: 0;
 	left: 0;
@@ -40,4 +41,12 @@ span {
 	border: 0; 
 	padding: 5px; 
 	border: 1px solid #421; 
+}
+
+#submit {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #000;
 }
